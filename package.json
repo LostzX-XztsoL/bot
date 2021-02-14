@@ -1,5 +1,5 @@
 {
-  "name": "toiniubot",
+  "name": "bot",
   "version": "0.0.2",
   "description": "Only termux",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "whatsapp",
     "bot"
   ],
-  "author": "Toin",
+  "author": "LostzX",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
