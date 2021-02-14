@@ -1,4 +1,4 @@
-### Oiin sou o Toin
+### Opa
 
 
 
@@ -231,15 +231,4 @@ Siga os passos abaixo!
 | Timer|✅|
 
 ---
-
-
-
-## Agradecimentos especiais para
-
-- [@adiwajshing/baileys](https://github.com/adiwajshing/Baileys) 
-- [RyzRdy](https://github.com/RyzRdy)
-- [Paritsod](https://github.com/Paritsod)
-- [mrfzvx12](https://github.com/mrfzvx12)
-- [Mr-hadi](https://github.com/Mr-hadi)
-- [MhankBarBar](https://github.com/mhankbarbar)
-- [NazwaS](https://github.com/NazwaS)
+## Feita em base no bot do toin
