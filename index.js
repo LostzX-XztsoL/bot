@@ -262,7 +262,7 @@ async function starts() {
 					ownerB: 'Só o LostzX pode usar esse cmd amigo🤣🤙🏻',
 					admin: 'Mlk,fica quietinho ae,pq só os adm brabo pode usar esse cmd😎🤝🏻',
 					Badmin: 'Como vou completar o comando se eu n sou adm burrão? ;-;',
-                                        daftarB: `── 「REGISTRE-SE」 ──\nOlá como!\nVocê não está registrado no banco de dados, \n\nComando : ${prefix}daftar nome|idade\nExemplo : ${prefix}daftar LostzX|14`,
+                                        daftarB: `── 「VIP」 ──\nOlá!\nVejo que você não é um vip..., \n\nMas para virar um vip,não precisa pagar! Apenas use: ${prefix}vip nome|idade\nExemplo : ${prefix}vip LostzX|14\nE pronto!\nAo fazer esse registro vip você pode usar todas as minhas funções`,
 				}
 			}
     			const apakah = ['Ya','Tidak']
@@ -338,7 +338,7 @@ async function starts() {
 			switch(command) {
 				case 'help':
 				case 'menu':
-					client.sendMessage(from, help(prefix), text)
+					client.sendMessage(from, help(prefix, sender), text, {quoted: mek})
 					break
                                 /*case 'makermenu':
                                         hisil = fs.readFileSync('./src/makerimg.jpg')
@@ -380,7 +380,7 @@ case 'timer':
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `Pedido recebido, removido da posição de administrador :\n`
+							teks += `parece q algm virou membro comumkkkkkkk \n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
@@ -415,7 +415,7 @@ case 'timer':
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('A tag alvo que você deseja promover!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Pedido recebido, adicionando posição como administrador :\n'
+						teks = 'Tem adm novo na área,respeitem o adm :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
@@ -722,7 +722,7 @@ case 'timer':
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
 					dtt.length > 600
-					? reply('Textnya kebanyakan om')
+					? reply('Esse texto e mt grande porra,quer me bugar?')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 							fs.unlinkSync(ranm)
@@ -772,7 +772,7 @@ case 'timer':
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
 					prefix = args[0]
-					reply(`O prefix foi alterado com sucesso para : ${prefix}`)
+					reply(`O prefixo foi alterado com sucesso para ${prefix} lostzinho`)
 					break
 				case 'meme':
 					meme = await kagApi.memes()
@@ -808,7 +808,7 @@ case 'timer':
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 Mencionando Todos 〙✪══\n╠➥'+teks+'╚═〘 Toin BOT 〙', members_id, true)
+					mentions('╔══✪〘 Mencionando Todos 〙✪══\n╠➥'+teks+'╚═〘 LostzX BOT 〙', members_id, true)
 					break
                 case 'tagall2':
 				client.updatePresence(from, Presence.composing) 
@@ -821,7 +821,7 @@ case 'timer':
 						teks += `╠➥ ${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					client.sendMessage(from, '╔══✪〘 Mencionando Todos 〙✪══\n╠➥'+teks+'╚═〘 Toin BOT 〙', text, {quoted: mek})
+					client.sendMessage(from, '╔══✪〘 Mencionando Todos 〙✪══\n╠➥'+teks+'╚═〘 LostzX BOT 〙', text, {quoted: mek})
 					break
                 case 'tagall3':
 				client.updatePresence(from, Presence.composing) 
@@ -891,14 +891,14 @@ case 'timer':
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						buff = await client.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							client.sendMessage(_.jid, buff, image, {caption: `*「 BROADCAST 」*\n\n${body.slice(4)}`})
+							client.sendMessage(_.jid, buff, image, {caption: `*「 Aviso 」*\n\n${body.slice(4)}`})
 						}
 						reply('')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `*「 BROADCAST 」*\n\n${body.slice(4)}`)
+							sendMess(_.jid, `*「 Aviso 」*\n\n${body.slice(4)}`)
 						}
-						reply('Transmissão de sucesso')
+						reply('A transmissão foi um sucesso lostzinho')
 					}
 					break
 					case 'bcgc':
@@ -909,14 +909,14 @@ case 'timer':
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						buff = await client.downloadMediaMessage(encmedia)
 						for (let _ of groupMembers) {
-							client.sendMessage(_.jid, buff, image, {caption: `*「 BC GROUP 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`})
+							client.sendMessage(_.jid, buff, image, {caption: `*「 Aviso de grupo 」*\n*Grupo* : ${groupName}\n\n${body.slice(6)}`})
 						}
 						reply('')
 					} else {
 						for (let _ of groupMembers) {
-							sendMess(_.jid, `*「 BC GROUP 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`)
+							sendMess(_.jid, `*「 Aviso de grupo 」*\n*Grupo* : ${groupName}\n\n${body.slice(6)}`)
 						}
-						reply('Grupo de transmissão de sucesso')
+						reply('A transmissão de grupo foi um sucesso lostzinho')
 					}
 					break
 				case 'alay':
@@ -952,7 +952,7 @@ case 'timer':
 					}, 2000)
                      setTimeout( () => {
 					client.updatePresence(from, Presence.composing) 
-					client.sendMessage(from, 'Sayonara👋', text) // ur cods
+					client.sendMessage(from, 'Vão se fuderkkkkkkk', text) // ur cods
 					}, 0)
                      break
 
@@ -1274,7 +1274,7 @@ case 'timer':
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
                if (anu.error) return reply(anu.error)
-                 infomp3 = `*Canção encontrada!!!*\nJudul : ${anu.result.title}\nFonte : ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*ESPERE ENVIANDO POR FAVOR, NÃO SPAM YA PAI*`
+                 infomp3 = `*Canção encontrada!*\nTítulo : ${anu.result.title}\nFonte : ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*Enviando a música...*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1309,14 +1309,14 @@ case 'timer':
 					break
                                   case 'daftar':
 					client.updatePresence(from, Presence.composing)
-					if (isUser) return reply('você já está registrado')
-					if (args.length < 1) return reply(`Parâmetro incorreto \nCommand : ${prefix}daftar nome|idade\nContoh : ${prefix}daftar Toin|18`)
+					if (isUser) return reply('Você já é um vip')
+					if (args.length < 1) return reply(`Parâmetro incorreto \nComando : ${prefix}vip nome|idade\nExemplo : ${prefix}vip LostzX|14`)
 					var reg = body.slice(8)
 					var jeneng = reg.split("|")[0];
 					var umure = reg.split("|")[1];
 						user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `\`\`\`O registro foi bem sucedido com SN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Era]: ${umure}\`\`\`\n\`\`\`Para usar o bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
+						client.sendMessage(from, `O registro vip foi um sucesso!\nEm ${date} ${time}\n[Nome]: ${jeneng}\n[Número]: wa.me/${sender.split("@")[0]}\n[Idade]: ${umure}\nPara usar o bot envie ${prefix}help ou ${prefix}menu\nTotal de usuários vip: ${user.length}`, text, {quoted: mek})
 					break
                                 case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
@@ -1393,7 +1393,7 @@ case 'timer':
 					break
                                 case 'nsfwneko':
 				    try{
-						if (!isNsfw) return reply('❌ *NSFW NAUM ATIVADO* ❌')
+						if (!isNsfw) return reply('❌ *NSFW NÃO ATIVADO* ❌')
                                                 if (!isUser) return reply(mess.only.daftarB)
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko?apikey=BotWeA`, {method: 'get'})
 						buffer = await getBuffer(res.result)
@@ -1530,15 +1530,15 @@ case 'timer':
                 const userXp = getLevelingXp(sender)
                 if (userLevel === undefined && userXp === undefined) return reply(mess.levelnol)
                 sem = sender.replace('@s.whatsapp.net','')
-                resul = `◪ *LEVEL*\n  ├─ ❏ *Nome* : ${sem}\n  ├─ ❏ *User XP* : ${userXp}\n  └─ ❏ *User Level* : ${userLevel}`
+                resul = `☑️ | Level\n\n❏ *Nome* : ${sem}\n❏ *User XP* : ${userXp}\n❏ *User Level* : ${userLevel}`
                client.sendMessage(from, resul, text, { quoted: mek})
                 .catch(async (err) => {
                         console.error(err)
                         await reply(`Error!\n${err}`)
                     })
             break
-				case 'fitnah':
-				if (args.length < 1) return reply(`Usage :\n${prefix}fitnah [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}fitnah @tagmember|hai|hai juga`)
+				case 'calúnia':
+				if (args.length < 1) return reply(`Usage :\n${prefix}calúnia [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}calúnia @tagmember|hai|hai juga`)
 				var gh = body.slice(7)
 				mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					var replace = gh.split("|")[0];
