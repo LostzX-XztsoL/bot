@@ -1,19 +1,20 @@
 const help = (prefix, pushname) => {
-	return `「 LostzX BOT 」
+	return `「  LostzX BOT⚡ 」
 
- ✅ | Prefixo「 ${prefix} 」
+ ✅ | Prefixo:「 ${prefix} 」
  ✅ | Status: Online
  ✅ | Criado por: @lostzx.mp4
 
-「 Informações 」
+「 ☑️ | Informações 」
 
-⚡| ${prefix}teste
-⚡| ${prefix}info
-⚡| ${prefix}owner
-⚡| ${prefix}ping
-⚡| ${prefix}blocklist
+⚡| ${prefix}teste [teste]
+⚡| ${prefix}info [informações]
+⚡| ${prefix}owner [criador]
+⚡| ${prefix}ping [ping]
+⚡| ${prefix}blocklist [blocklist]
+⚡| ${prefix}notas [notas de att]
 
-「 Comandos de figurinhas 」
+「 ☑️ | Comandos de figurinhas 」
 
 ⚡| ${prefix}sticker
 ⚡| ${prefix}stiker
@@ -21,18 +22,18 @@ const help = (prefix, pushname) => {
 ⚡| ${prefix}stikergif
 ⚡| ${prefix}toimg
 
-「 Comandos de áudio 」
+「 ☑️ | Comandos de áudio 」
 
 ⚡| ${prefix}tts
 ⚡| ${prefix}play
 
-「 Comandos de download 」
+「 ☑️ | Comandos de download 」
 
 ⚡| ${prefix}play
 ⚡| ${prefix}ytmp4
 ⚡| ${prefix}apks
 
-「 Comandos +18 」
+「 🔞 | Comandos +18 」
 
 🔞 | ${prefix}nsfwfeets
 🔞 | ${prefix}nsfwbobs
@@ -47,7 +48,7 @@ const help = (prefix, pushname) => {
 🔞 | ${prefix}pack
 🔞 | ${prefix}links
 
-「 Comandos de admin 」
+「 ☑️ | Comandos de admin 」
 
 ⚡| ${prefix}leave
 ⚡| ${prefix}opengc
@@ -64,7 +65,7 @@ const help = (prefix, pushname) => {
 ⚡| ${prefix}delete
 ⚡| ${prefix}simih (1/0)
 
- 「 Comandos de logos 」
+ 「 ☑️ | Comandos de logos 」
 
 *Os servidores estão instáveis. Caso não envie,mande o comando denovo.*
 
@@ -100,30 +101,31 @@ const help = (prefix, pushname) => {
 ⚡| ${prefix}pubglogo
 ⚡| ${prefix}quotemaker
 
- 「 Outros 」
+ 「 ☑️ | Outros 」
 
 ⚡| ${prefix}minigames
 ⚡| ${prefix}wame
 ⚡| ${prefix}tiktokstalk
 ⚡| ${prefix}ocr
 ⚡| ${prefix}calúnia
+⚡| ${prefix}tabela
 
- 「 Grupo do meu criador 」
+ 「 ☑️ | Grupo do meu criador 」
 
 🐊 | Grupo de zoeira sem motivo,caso queira entrar leia as regras na descrição para não ser banido,experimente os comandos do bot que são disponíveis somente em grupos e divirta-se!
 
 https://chat.whatsapp.com/BuY1JEsaY5EJvr7Ku1ahQO
 
-「 Donate 」
+「 ☑️ | Donate 」
 
-❤️ | use ${prefix}donate para fazer uma doação.
+❤️ | use ${prefix}donate para fazer uma doação
 
-「 Me adicionar 」
+「 ☑️ | Me adicionar 」
 
 🌪️ | Para me adicionar em um grupo,use ${prefix}adc
 
-                       by @lostzx.mp4
-                 wa.me/5511950438690`
+⚡| by @lostzx.mp4
+wa.me/5511950438690`
 
 }
 
