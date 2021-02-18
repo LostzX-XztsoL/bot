@@ -78,13 +78,13 @@ const { othermenu } require('./database/menu/othermenu')*/
 /******LOAD OF VCARD INPUT******/
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
-            + 'FN:Toin🖤\n' // full name
+            + 'FN:LostzX\n' // full name
             + 'ORG:Owner Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=556296638900:+55 (62) 9663-8900\n' // ID do WhatsApp + número de telefone
+            + 'TEL;type=CELL;type=VOICE;waid=5511950438690:+55 (11) 95043-8690\n' // ID do WhatsApp + número de telefone
             + 'END:VCARD'
 /******END OF VCARD INPUT******/
 
-prefix = '*'
+prefix = '!'
 blocked = []
 
 /******BEGIN OF FUNCTIONS INPUT******/
@@ -208,7 +208,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Xauzinho @${num.split('@')[0]}👋`
+				teks = `Flw @${num.split('@')[0]} nem vai fzr falta ghost do krl👋`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -246,30 +246,30 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '⌛ Calmaer opoha to fazendo ⌛',
-				success: '✔️ Sucesso ✔️',
-                                levelon: '❬ ✔ ❭ *habilitar Level*',
-				leveloff: ' ❬ X ❭  *desabilitar Level*',
-				levelnoton: '❬ X ❭ *level não ativo*',
+				wait: '⏱️ | Aguarde um pouco...',
+				success: '✅ | Sucesso',
+                                levelon: '✅ | Level habilitado',
+				leveloff: '❎ | Level desabilitado',
+				levelnoton: '❎ | Level não ativo',
 				levelnol: '*Pqp kskst level* 0 ',
 				error: {
-					stick: '[❗] Falha, ocorreu um erro ao converter a imagem em um adesivo ❌',
-					Iv: '❌ Link inválido ❌'
+					stick: 'Erro :/',
+					Iv: 'Esse link aq é inválido gay'
 				},
 				only: {
-					group: '[❗] Este comando só pode ser usado em grupos! ❌',
-					ownerG: '[❗] Este comando só pode ser usado pelo grupo proprietário! ❌',
-					ownerB: '[❗] Este comando só pode ser usado pelo Toin! ❌',
-					admin: '[❗] Este comando só pode ser usado por administradores de grupo! ❌',
-					Badmin: '[❗] Este comando só pode ser usado quando o bot se torna administrador! ❌',
-                                        daftarB: `── 「REGISTRE-SE」 ──\nOlá como!\nVocê não está registrado no banco de dados, \n\nComando : ${prefix}daftar nome|idade\nExemplo : ${prefix}daftar Toin|18`,
+					group: 'Esse comando só pega em gps amigão😂',
+					ownerG: 'Só o dono do gp pode usar esse cmd😐',
+					ownerB: 'Só o LostzX pode usar esse cmd amigo🤣🤙🏻',
+					admin: 'Mlk,fica quietinho ae,pq só os adm brabo pode usar esse cmd😎🤝🏻',
+					Badmin: 'Como vou completar o comando se eu n sou adm burrão? ;-;',
+                                        daftarB: `── 「REGISTRE-SE」 ──\nOlá como!\nVocê não está registrado no banco de dados, \n\nComando : ${prefix}daftar nome|idade\nExemplo : ${prefix}daftar LostzX|14`,
 				}
 			}
     			const apakah = ['Ya','Tidak']
         		const bisakah = ['Bisa','Tidak Bisa']
 		        const kapankah = ['Hari Lagi','Minggu Lagi','Bulan Lagi','Tahun Lagi']
 			const botNumber = client.user.jid
-			const ownerNumber = ["556296638900@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["5511950438690@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
